@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Documentação - Autoeletric</title>
+<link rel="icon" href="logo.png" type="image/png">
+<style>
+  body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #222;
+    background: #fff;
+    line-height: 1.5;
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 24px 16px 48px;
+  }
+  .topo { display: flex; align-items: center; gap: 14px; border-bottom: 1px solid #ccc; padding-bottom: 12px; }
+  .topo img { width: 56px; height: 56px; }
+  .topo h1 { margin: 0; font-size: 1.6rem; }
+  .topo p { margin: 2px 0 0; color: #555; }
+  h2 { font-size: 1.25rem; margin-top: 32px; border-bottom: 1px solid #ddd; padding-bottom: 4px; }
+  h3 { font-size: 1.05rem; margin-bottom: 4px; }
+  table { border-collapse: collapse; width: 100%; margin: 8px 0; font-size: .95rem; }
+  th, td { border: 1px solid #ccc; padding: 6px 8px; text-align: left; vertical-align: top; }
+  th { background: #f2f2f2; }
+  code { font-family: Consolas, monospace; font-size: .9em; }
+  .cor { display: inline-block; width: 18px; height: 18px; border: 1px solid #999; vertical-align: middle; margin-right: 6px; }
+  figure { margin: 16px 0 24px; text-align: center; }
+  figure img { display: block; margin: 0 auto; max-width: 100%; max-height: 90vh; width: auto; height: auto; border: 1px solid #ccc; }
+  figure.celular img { max-width: 300px; }
+  figcaption { font-size: .9rem; color: #444; margin-top: 4px; }
+  @media print {
+    @page { size: A4; margin: 15mm; }
+    body { max-width: none; padding: 0; }
+    figure, tr { break-inside: avoid; }
+    figure { margin: 0; }
+    figure + figure { break-before: page; }
+    figure img { max-height: 245mm; }
+    h2 { break-after: avoid; }
+  }
+</style>
+</head>
+<body>
+
+<div class="topo">
+  <img src="logo.png" alt="Logo Autoeletric">
+  <div>
+    <h1>Autoeletric – Documentação do site</h1>
+    <p>Equipe: Beatriz Vieira dos Santos e João Vitor Rodrigues Araújo · Curitiba, 2026</p>
+  </div>
+</div>
+
+<h2>1. Tema e objetivos</h2>
+<p><strong>Tema:</strong> mobilidade elétrica urbana. A Autoeletric é uma loja virtual de veículos autopropelidos elétricos (patinetes, skates, monociclos, bicicletas elétricas e scooters) e acessórios (capacetes, carregadores, baterias e iluminação). A compra é feita pelo site e o produto é retirado na loja física em Curitiba; não há entrega.</p>
+<p><strong>Público-alvo:</strong> adultos (18+) que procuram um meio de transporte elétrico que não exige CNH, conforme a Resolução CONTRAN nº 996/2023.</p>
+<p><strong>Objetivos:</strong></p>
+<ul>
+  <li>Mostrar o catálogo com preço, ficha técnica e estoque.</li>
+  <li>Permitir busca, filtro por categoria e ordenação por preço.</li>
+  <li>Ter carrinho, cadastro (só maiores de 18), login e finalização da compra.</li>
+  <li>Mostrar o status do pedido até a retirada na loja.</li>
+  <li>Informar como retirar o pedido e as regras de circulação em Curitiba.</li>
+</ul>
+
+<h2>2. Ferramentas e recursos de suporte</h2>
+<table>
+  <tr><th>Ferramenta</th><th>Uso</th></tr>
+  <tr><td>Visual Studio Code</td><td>Editor de código.</td></tr>
+  <tr><td>Google Chrome (DevTools)</td><td>Testes, depuração do JavaScript e teste em tamanho de celular.</td></tr>
+  <tr><td>Bootstrap 5.3.8</td><td>Grade responsiva, menu, dropdown, modal, alertas e validação de formulários. CSS pela CDN jsDelivr e JS em <code>js/bootstrap.bundle.min.js</code>.</td></tr>
+  <tr><td>localStorage</td><td>Guarda clientes, sessão, carrinho, pedidos, estoque e mensagens (simula um banco de dados).</td></tr>
+  <tr><td>Imagens SVG</td><td>Ilustrações dos produtos feitas em código SVG.</td></tr>
+  <tr><td>MDN e documentação do Bootstrap</td><td>Consulta.</td></tr>
+</table>
+
+<h2>3. Linguagens</h2>
+<ul>
+  <li><strong>HTML5:</strong> estrutura das 12 páginas, com tags semânticas e formulários com validação.</li>
+  <li><strong>CSS3:</strong> arquivo <code>css/style.css</code>, com variáveis de cor, Flexbox, Grid e media queries para celular, tablet e computador.</li>
+  <li><strong>JavaScript:</strong> arquivos <code>js/dados.js</code> (produtos e categorias) e <code>js/app.js</code> (funcionamento do site).</li>
+</ul>
+
+<h2>4. Sites de referência</h2>
+<table>
+  <tr><th>Site</th><th>O que usamos como inspiração</th></tr>
+  <tr><td>Eco Drive Mobilidade<br><small>ecodrivemobilidade.com.br</small></td><td>Loja de Curitiba do mesmo segmento: faixa de vantagens no topo (sem CNH e sem emplacamento), categorias com imagem, produtos em destaque com preço e ênfase nos autopropelidos de até 1.000 W.</td></tr>
+  <tr><td>Bee Brasil<br><small>bee-brasil.com</small></td><td>Veículos organizados em linhas/categorias, banner de destaque na página inicial e acessórios que complementam o veículo.</td></tr>
+  <tr><td>Ambtus<br><small>ambtus.com.br</small></td><td>Categorias com descrição curta, modelos em destaque com preço e botão "Ver detalhes" e página sobre a loja.</td></tr>
+</table>
+
+<h2>5. Divisão de tarefas</h2>
+<table>
+  <tr><th>Integrante</th><th>Tarefas</th></tr>
+  <tr><td>Beatriz Vieira dos Santos</td><td>Pesquisa do tema e da legislação, estudo de UX/UI, cores e tipografia, páginas Início, Retirada, Regras, Sobre e Contato, textos.</td></tr>
+  <tr><td>João Vitor Rodrigues Araújo</td><td>Estrutura do projeto, CSS e responsividade, páginas Veículos, Acessórios, Produto, Carrinho, Login, Cadastro e Pedidos, JavaScript.</td></tr>
+  <tr><td>Os dois</td><td>Mapa do site, testes, correções e documentação.</td></tr>
+</table>
+
+<h2>6. Dificuldades encontradas</h2>
+<ul>
+  <li>Fazer cadastro, login, carrinho e pedidos sem servidor. Solução: usar o <code>localStorage</code>.</li>
+  <li>Não deixar comprar mais do que o estoque. O estoque é conferido ao adicionar e de novo ao confirmar o pedido.</li>
+  <li>Validar idade mínima e senhas iguais no cadastro, o que o HTML sozinho não faz.</li>
+  <li>Voltar ao carrinho depois do login (resolvido com <code>?next=carrinho.html</code> na URL).</li>
+  <li>Manter menu e rodapé iguais nas 12 páginas, já que são repetidos em cada arquivo.</li>
+  <li>Ajustar o layout da página inicial para celular, tablet e computador.</li>
+</ul>
+
+<h2>7. Experiência do Usuário (UX)</h2>
+<p>Caminho principal do usuário: escolher o produto → adicionar ao carrinho → entrar ou se cadastrar → conferir o resumo → confirmar → acompanhar o status → retirar na loja.</p>
+<ul>
+  <li>O estoque aparece em cada produto, com aviso de "Últimas unidades" e "Esgotado".</li>
+  <li>O aviso de que não há entrega aparece em várias páginas, para não gerar expectativa errada.</li>
+  <li>O login só é pedido na hora de finalizar a compra.</li>
+  <li>Antes de confirmar, uma janela mostra o resumo do pedido.</li>
+  <li>Mensagens rápidas confirmam ações (ex.: produto adicionado).</li>
+</ul>
+
+<h2>8. Interface do Usuário (UI)</h2>
+<ul>
+  <li>Cabeçalho com logo e menu escuro fixo no topo.</li>
+  <li>Faixa verde com o título no início de cada página interna.</li>
+  <li>Produtos em cartões com imagem, nome, preço e botões "Detalhes" e "Adicionar".</li>
+  <li>Botão principal verde-lima; botões secundários só com contorno.</li>
+  <li>Rodapé escuro com links de Loja, Ajuda e Conta.</li>
+  <li>Layout responsivo: no celular o menu vira um botão e o conteúdo fica em uma coluna.</li>
+</ul>
+
+<h2>9. Usabilidade</h2>
+<ul>
+  <li>Item do menu da página atual fica destacado.</li>
+  <li>Contador de itens no carrinho sempre visível.</li>
+  <li>Mensagem de erro específica em cada campo de formulário.</li>
+  <li>Botão desabilitado em produto esgotado e quantidade limitada ao estoque.</li>
+  <li>Botões de remover e alterar quantidade no carrinho, e de voltar no resumo.</li>
+  <li>Acessibilidade: <code>lang="pt-BR"</code>, <code>label</code> em todos os campos, <code>aria-label</code> em botões de símbolo, foco visível no teclado e bom contraste de cores.</li>
+</ul>
+
+<h2>10. Paleta de cores</h2>
+<p>Verde-lima para lembrar energia elétrica, com verde quase preto para dar contraste.</p>
+<table>
+  <tr><th>Cor</th><th>Código</th><th>Uso</th></tr>
+  <tr><td><span class="cor" style="background:#b8f337"></span>Verde-lima</td><td>#b8f337</td><td>Botões, destaques e faixa de título.</td></tr>
+  <tr><td><span class="cor" style="background:#0f1a14"></span>Verde quase preto</td><td>#0f1a14</td><td>Textos, menu e rodapé.</td></tr>
+  <tr><td><span class="cor" style="background:#17301f"></span>Verde-escuro</td><td>#17301f</td><td>Destaque da página inicial e preços.</td></tr>
+  <tr><td><span class="cor" style="background:#f4f6ef"></span>Cinza-claro</td><td>#f4f6ef</td><td>Fundo de blocos.</td></tr>
+  <tr><td><span class="cor" style="background:#526157"></span>Cinza-esverdeado</td><td>#526157</td><td>Textos secundários.</td></tr>
+  <tr><td><span class="cor" style="background:#c0392b"></span>Vermelho</td><td>#c0392b</td><td>Erros e produto esgotado.</td></tr>
+</table>
+
+<h2>11. Tipografia</h2>
+<p>Fonte: <code>"Avenir Next", Avenir, "Segoe UI", sans-serif</code>. São fontes sem serifa, fáceis de ler na tela e já instaladas no computador, então não precisam ser baixadas. Títulos em negrito forte (peso 800) e texto normal com espaçamento de linha 1,6.</p>
+
+<h2>12. Mapa do site</h2>
+<ul>
+  <li>Início (<code>index.html</code>)
+    <ul>
+      <li>Veículos (<code>catalogo.html</code>) → Produto (<code>produto.html</code>)</li>
+      <li>Acessórios (<code>acessorios.html</code>) → Produto (<code>produto.html</code>)</li>
+      <li>Carrinho (<code>carrinho.html</code>)</li>
+      <li>Conta: Entrar (<code>login.html</code>), Cadastrar (<code>cadastro.html</code>), Meus pedidos (<code>pedidos.html</code>)</li>
+      <li>Retirada (<code>retirada.html</code>)</li>
+      <li>Regras (<code>regulamentacao.html</code>)</li>
+      <li>Sobre (<code>sobre.html</code>)</li>
+      <li>Contato (<code>contato.html</code>)</li>
+      <li>Links externos: Detran-PR e Ministério dos Transportes</li>
+    </ul>
+  </li>
+</ul>
+
+<h2>13. Telas</h2>
+<figure><img src="telas/01-inicio.png" alt="Início"><figcaption>Início</figcaption></figure>
+<figure><img src="telas/02-veiculos.png" alt="Veículos"><figcaption>Veículos</figcaption></figure>
+<figure><img src="telas/03-acessorios.png" alt="Acessórios"><figcaption>Acessórios</figcaption></figure>
+<figure><img src="telas/04-produto.png" alt="Produto"><figcaption>Detalhe do produto</figcaption></figure>
+<figure><img src="telas/05-carrinho.png" alt="Carrinho"><figcaption>Carrinho</figcaption></figure>
+<figure><img src="telas/06-cadastro.png" alt="Cadastro"><figcaption>Cadastro</figcaption></figure>
+<figure><img src="telas/07-login.png" alt="Login"><figcaption>Login</figcaption></figure>
+<figure><img src="telas/08-pedidos.png" alt="Meus pedidos"><figcaption>Meus pedidos</figcaption></figure>
+<figure><img src="telas/09-retirada.png" alt="Retirada"><figcaption>Como retirar</figcaption></figure>
+<figure><img src="telas/10-regras.png" alt="Regras"><figcaption>Regras de circulação</figcaption></figure>
+<figure><img src="telas/11-sobre.png" alt="Sobre"><figcaption>Sobre</figcaption></figure>
+<figure><img src="telas/12-contato.png" alt="Contato"><figcaption>Contato</figcaption></figure>
+<figure class="celular"><img src="telas/13-inicio-celular.png" alt="Início no celular"><figcaption>Início no celular (primeira tela)</figcaption></figure>
+
+<h2>14. Aplicações de JavaScript</h2>
+<p>Cada página tem um atributo <code>data-pagina</code> no <code>&lt;body&gt;</code>, e o <code>app.js</code> executa só a função daquela página.</p>
+<table>
+  <tr><th>Página</th><th>O que o JavaScript faz</th></tr>
+  <tr><td>Todas</td><td>Atualiza o contador do carrinho, mostra "Olá, nome" quando logado e o ano no rodapé.</td></tr>
+  <tr><td>Início</td><td>Monta os destaques, as categorias e as novidades a partir do <code>dados.js</code>.</td></tr>
+  <tr><td>Veículos e Acessórios</td><td>Busca por texto, filtro por categoria e ordenação por nome ou preço, sem recarregar a página.</td></tr>
+  <tr><td>Produto</td><td>Lê o <code>?id=</code> da URL e monta a página com preço, estoque e ficha técnica.</td></tr>
+  <tr><td>Carrinho</td><td>Altera quantidades (limitadas ao estoque), calcula o total, abre o resumo da compra e gera o pedido, baixando o estoque.</td></tr>
+  <tr><td>Cadastro</td><td>Valida idade mínima de 18 anos, senhas iguais e e-mail repetido; salva o cliente.</td></tr>
+  <tr><td>Login</td><td>Confere e-mail e senha e volta para a página de origem.</td></tr>
+  <tr><td>Meus pedidos</td><td>Lista os pedidos do cliente com a linha de status e simula o avanço das etapas.</td></tr>
+  <tr><td>Contato</td><td>Valida e salva a mensagem e mostra a confirmação.</td></tr>
+  <tr><td>Regras</td><td>Filtra a tabela de regras pelos botões.</td></tr>
+  <tr><td>Regras e Sobre</td><td>Abre e fecha o menu no celular.</td></tr>
+</table>
+
+</body>
+</html>
