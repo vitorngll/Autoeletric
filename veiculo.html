@@ -1,0 +1,57 @@
+﻿<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="./img/logo.png" type="image/x-icon">
+  <title>Veículos | Autoeletric</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-pagina="catalogo">
+  <header>
+    <div class="container topo">
+      <a class="marca" href="index.html">Auto<span>eletric</span></a>
+      <nav>
+        <a href="index.html">Início</a>
+        <a class="ativo" href="veiculo.html">Veículos</a>
+        <a href="acessorios.html">Acessórios</a>
+        <a href="retirada.html">Retirada</a>
+        <a href="regras.html">Regras</a>
+        <a href="sobre.html">Sobre</a>
+        <a href="https://www.detran.pr.gov.br/Pagina/Legislacao" target="_blank" rel="noopener noreferrer">Legislação Detran-PR ↗</a>
+        <a href="contato.html">Contato</a>
+        <a href="login.html">Entrar</a>
+        <a href="carrinho.html">Carrinho (<span class="qtd-carrinho">0</span>)</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="banner">
+      <div class="container">
+        <h1>Veículos Autopropelidos</h1>
+        <p>Modelos dentro da Resolução CONTRAN 996/2023.</p>
+      </div>
+    </section>
+
+    <section class="secao container">
+      <div class="filtros">
+        <input type="search" id="filtroBusca" placeholder="Buscar veículo...">
+        <select id="filtroCategoria">
+          <option value="todas">Todas as categorias</option>
+        </select>
+      </div>
+      <div class="grid" id="listaProdutos"></div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>© 2026 Autoeletric - Curitiba/PR</p>
+    </div>
+  </footer>
+
+  <script src="js/dados.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

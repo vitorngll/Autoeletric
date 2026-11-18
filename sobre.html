@@ -1,120 +1,88 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="pt-BR">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Sobre Nós | Autoeletric</title>
-        <link rel="icon" href="img/logo.png" type="image/png">
-        <link rel="stylesheet" href="css/style.css">
-    </head>
-    <body data-pagina="sobre">
-        <header>
-            <div class="cabecalho-topo">
-                <div class="container-principal">  
-                    <a class="marca" href="index.html">
-                        <img src="img/logo.png" alt="">
-                        <span>Auto<em>eletric</em></span>
-                    </a>
-                    <span class="slogan">Mobilidade elétrica urbana, retirada em Curitiba</span>
-                </div>
-            </div>
-            <nav class="menu-simples-barra" aria-label="Principal">
-                <div class="container-principal">
-                    <button id="botaoMenu" type="button" aria-expanded="false" aria-controls="menuSimples">Menu</button>
-                    <ul id="menuSimples">
-                        <li>
-                            <a href="index.html">Início</a>
-                        </li>
-                        <li>
-                            <a href="catalogo.html">Veículos</a>
-                        </li>
-                        <li>
-                            <a href="acessorios.html">Acessórios</a>
-                        </li>
-                        <li>
-                            <a href="retirada.html">Retirada</a>
-                        </li>
-                        <li>
-                            <a href="regulamentacao.html">Regras</a>
-                        </li>
-                        <li>
-                            <a href="sobre.html" class="ativo">Sobre</a>
-                        </li>
-                        <li>
-                            <a href="contato.html">Contato</a>
-                        </li>
-                        <li>
-                            <a href="https://www.detran.pr.gov.br" target="_blank" rel="noopener">Detran-PR &#8599;</a>
-                        </li>
-                        <li>
-                            <a href="pedidos.html">Conta</a>
-                        </li>
-                        <li>
-                            <a href="carrinho.html">Carrinho 
-                                <span class="contador-carrinho" hidden>0</span>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </nav>
-        </header>
-        <main>
-            <section class="cabecalho-pagina">
-                <div class="container-principal">
-                    <h1>Sobre a Autoeletric</h1>
-                    <p>Loja virtual de veículos autopropelidos elétricos, com loja física em Curitiba.</p>
-                </div>
-            </section>
-            <section class="secao">
-                <div class="container-principal">
-                    <div class="texto-leitura">
-                        <h2>Como funciona</h2>
-                        <p>O site é o principal canal de consulta e compra: catálogo com preços, características, especificações e quantidade em estoque. Ao decidir comprar, o cliente entra na conta ou se cadastra, revisa o carrinho e confere o resumo completo antes de pagar.</p>
-                        <p>A logística é exclusivamente de compra online com retirada presencial. O pedido passa pelos status pagamento pendente, pagamento aprovado, em preparação, aguardando retirada e retirado, e o estoque é atualizado a cada venda para impedir a compra de itens indisponíveis.</p>
-                        <h2 style="margin-top:2rem">Equipe</h2>
-                    </div>
-                    <ul class="equipe">
-                        <li>Beatriz Vieira dos Santos</li>
-                        <li>João Vitor Rodrigues Araújo</li>
-                    </ul>
-                </div>
-            </section>
-        </main>
-        <footer class="rodape">
-            <div class="container-principal">
-                <div class="rodape-grade">
-                    <div>
-                        <a class="marca text-white mb-2" href="index.html">
-                            <img src="img/logo.png" alt="">
-                            <span>Auto<em style="color:#0f1a14">eletric</em></span>
-                        </a>
-                        <p>Loja virtual de veículos autopropelidos elétricos e acessórios. Compra online, retirada presencial na loja física em Curitiba/PR.</p>
-                    </div>
-                    <div>
-                        <h2>Loja</h2>
-                        <ul>
-                            <li><a href="catalogo.html">Veículos</a></li>
-                            <li><a href="acessorios.html">Acessórios</a></li>
-                            <li><a href="carrinho.html">Carrinho</a></li>
-                        </ul>
-                    </div>
-                    <div>
-                        <h2>Ajuda</h2>
-                        <ul>
-                            <li><a href="retirada.html">Como retirar</a></li>
-                            <li><a href="regulamentacao.html">Regras de circulação</a></li>
-                            <li><a href="contato.html">Contato</a></li>
-                        </ul>
-                    </div>
-                    <div>
-                        <h2>Contato</h2>
-                        <p>(41) 99999-9999</p>
-                        <p>contato@autoeletric.com</p>
-                    </div>
-                </div>
-            </div>
-        </footer>
-                <script src="js/dados.js"></script>
-                <script src="js/app.js"></script>
-    </body>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="./img/logo.png" type="image/x-icon">
+  <title>Sobre | Autoeletric</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-pagina="sobre">
+  <header>
+    <div class="container topo">
+      <a class="marca" href="index.html">Auto<span>eletric</span></a>
+      <nav>
+        <a href="index.html">Início</a>
+        <a href="veiculo.html">Veículos</a>
+        <a href="acessorios.html">Acessórios</a>
+        <a href="retirada.html">Retirada</a>
+        <a href="regras.html">Regras</a>
+        <a class="ativo" href="sobre.html">Sobre</a>
+        <a href="https://www.detran.pr.gov.br/Pagina/Legislacao" target="_blank" rel="noopener noreferrer">Legislação Detran-PR ↗</a>
+        <a href="contato.html">Contato</a>
+        <a href="login.html">Entrar</a>
+        <a href="carrinho.html">Carrinho (<span class="qtd-carrinho">0</span>)</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="banner">
+      <div class="container">
+        <h1>Sobre a Autoeletric</h1>
+        <p>Inovação em mobilidade urbana sustentável.</p>
+      </div>
+    </section>
+
+    <section class="secao container">
+      <div class="card" style="margin-bottom: 1.5rem;">
+        <h3>Nossa Proposta</h3>
+        <p>A Autoeletric é uma loja especializada na comercialização de veículos autopropelidos elétricos e acessórios em Curitiba. O nosso site funciona como plataforma completa de consulta de estoque, especificações técnicas e compra online, com retirada presencial assegurada na nossa loja física[cite: 7].</p>
+      </div>
+
+      <h2>Mídia</h2>
+      <div class="grid sobre-grid">
+        <div class="sobre-coluna">
+          <div class="card">
+            <h3>Conheça a Autoeletric</h3>
+            <video class="player-midia" controls preload="metadata" poster="img/video-capa.jpg">
+              <source src="midia/autoeletric.mp4" type="video/mp4">
+              <track src="midia/autoeletric.vtt" kind="captions" srclang="pt-BR" label="Português" default>
+              Seu navegador não suporta a reprodução de vídeo.
+            </video>
+          </div>
+          <div class="card">
+            <h3>Equipe do Projeto</h3>
+            <br>
+            <p><strong>Beatriz Vieira dos Santos</strong></p>
+            <p><strong>João Vitor Rodrigues Araújo</strong></p>
+          </div>
+        </div>
+        <div class="sobre-coluna">
+          <div class="card">
+            <h3>Dicas de segurança</h3>
+            <audio class="player-midia player-audio" controls preload="metadata">
+              <source src="midia/dicas-seguranca.m4a" type="audio/mp4">
+              Seu navegador não suporta a reprodução de áudio.
+            </audio>
+          </div>
+          <div class="card">
+            <h3>Tecnologias Utilizadas</h3>
+            <br>
+            <p>Desenvolvido com tecnologias web modernas (HTML5, CSS3 e JavaScript puro com persistência em <em>LocalStorage</em>).</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>© 2026 Autoeletric - Curitiba/PR</p>
+    </div>
+  </footer>
+
+  <script src="js/dados.js"></script>
+  <script src="js/app.js"></script>
+</body>
 </html>

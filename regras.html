@@ -1,0 +1,79 @@
+﻿<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="./img/logo.png" type="image/x-icon">
+  <title>Regras de Circulação | Autoeletric</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-pagina="regras">
+  <header>
+    <div class="container topo">
+      <a class="marca" href="index.html">Auto<span>eletric</span></a>
+      <nav>
+        <a href="index.html">Início</a>
+        <a href="veiculo.html">Veículos</a>
+        <a href="acessorios.html">Acessórios</a>
+        <a href="retirada.html">Retirada</a>
+        <a class="ativo" href="regras.html">Regras</a>
+        <a href="sobre.html">Sobre</a>
+        <a href="https://www.detran.pr.gov.br/Pagina/Legislacao" target="_blank" rel="noopener noreferrer">Legislação Detran-PR ↗</a>
+        <a href="contato.html">Contato</a>
+        <a href="login.html">Entrar</a>
+        <a href="carrinho.html">Carrinho (<span class="qtd-carrinho">0</span>)</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="banner">
+      <div class="container">
+        <h1>Regulamentação e segurança</h1>
+        <p>O que a lei diz sobre os autopropelidos que vendemos e onde você pode circular em Curitiba.</p>
+      </div>
+    </section>
+
+    <section class="secao container">
+      <div class="alerta">
+        <strong>Resolução CONTRAN nº 996/2023:</strong> equipamentos autopropelidos têm motor de até 1.000 W, velocidade máxima de fabricação de 32 km/h, largura de até 70 cm e distância entre eixos de até 130 cm. Monociclos autoequilibrados podem ter até 4.000 W. Não exigem CNH, registro, licenciamento ou emplacamento.
+      </div>
+
+      <h2>Onde e como circular no Paraná</h2>
+      <p>A Resolução CETRAN-PR nº 106/2026 define as regras que valem para Curitiba. Filtre a tabela por tipo de regra:</p>
+      <div class="acoes">
+        <button class="btn" type="button" onclick="filtrarRegras('todos')">Todas</button>
+        <button class="btn" type="button" onclick="filtrarRegras('velocidade')">Limites de velocidade</button>
+        <button class="btn" type="button" onclick="filtrarRegras('condutor')">Condutor</button>
+        <button class="btn" type="button" onclick="filtrarRegras('proibicoes')">Proibições</button>
+      </div>
+
+      <table id="tabelaRegras">
+        <caption>Regras de circulação em Curitiba</caption>
+        <thead>
+          <tr><th>Local ou item</th><th>Regra</th><th>Limite</th><th>Situação</th></tr>
+        </thead>
+        <tbody>
+          <tr data-tipo="velocidade"><td>Ciclovias e ciclofaixas</td><td>Velocidade máxima reduzida</td><td>20 km/h</td><td>Permitido</td></tr>
+          <tr data-tipo="velocidade"><td>Áreas de pedestres</td><td>Somente onde autorizado e sinalizado</td><td>6 km/h</td><td>Condicionado</td></tr>
+          <tr data-tipo="velocidade"><td>Vias urbanas</td><td>Ruas com velocidade regulamentada</td><td>Até 40 km/h</td><td>Permitido</td></tr>
+          <tr data-tipo="condutor"><td>Idade mínima</td><td>Entre 16 e 18 anos, com autorização dos responsáveis</td><td>16 anos</td><td>Obrigatório</td></tr>
+          <tr data-tipo="condutor"><td>Capacete</td><td>Recomendado para autopropelidos e e-bikes</td><td>—</td><td>Recomendado</td></tr>
+          <tr data-tipo="condutor"><td>Itens de segurança</td><td>Velocímetro ou limitador, campainha e sinalização noturna</td><td>—</td><td>Obrigatório</td></tr>
+          <tr data-tipo="proibicoes"><td>Rodovias e vias de trânsito rápido</td><td>Circulação proibida</td><td>—</td><td>Proibido</td></tr>
+          <tr data-tipo="proibicoes"><td>Faixas exclusivas de ônibus</td><td>Circulação proibida</td><td>—</td><td>Proibido</td></tr>
+        </tbody>
+      </table>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>© 2026 Autoeletric - Curitiba/PR</p>
+    </div>
+  </footer>
+
+  <script src="js/dados.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
